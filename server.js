@@ -14,16 +14,16 @@ var express = require('express'),
     });
     app.post('/send-email', function (req, res) {
       let transporter = nodeMailer.createTransport({
-          host: 'smtp.gmail.com',
+          host: 'smtp.googlemail.com',
           port: 465,
           secure: true,
           auth: {
-              user: 'xxx@xx.com',
-              pass: 'xxxx'
-          }
+              user: 'pasha.kxcon@gmail.com',
+              pass: 'fcmzxmmtinezpita'
+          }        /* fcmzxmmtinezpita  */
       });
       let mailOptions = {
-          from: '"Krunal Lathiya" <xx@gmail.com>', // sender address
+          from: '"pasha kx will send" <pasha.kxml@gmail.com>', // sender address
           to: req.body.to, // list of receivers
           subject: req.body.subject, // Subject line
           text: req.body.body, // plain text body
